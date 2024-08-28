@@ -202,3 +202,26 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), #050816);
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), #050816);
+}
+
+.logos::before, .logos::after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}

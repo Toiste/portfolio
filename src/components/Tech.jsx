@@ -1,19 +1,19 @@
 import React from "react";
-
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
+
 
 const Tech = () => {
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
-      {technologies.map((technology) => (
-        <div className='w-28 h-28' key={technology.name}>
-          <BallCanvas icon={technology.icon} />
+    <section className='flex relative whitespace-nowrap logos h-96 overflow-hidden items-center '>
+      <div className="animate-slides">
+      {technologies.map((technology, index) => (
+        <div className=' w-28 h-28 inline-block ' key={index}>
+          <img className="opacity-50"  src={technology.icon} alt="tech" />
         </div>
       ))}
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default SectionWrapper(Tech, "");
+export default Tech

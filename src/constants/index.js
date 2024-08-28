@@ -15,13 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   ifesLogo,
   lampexLogo,
@@ -112,6 +105,78 @@ const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+  {
+    name: "docker",
+    icon: docker,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
 ];
 
@@ -205,6 +270,10 @@ const projects = [
         name: "JavaScript",
         color: "pink-text-gradient",
       },
+      {
+        name: "Figma",
+        color: "blue-text-gradient",
+      },
     ],
     image: byakuLoja,
     source_code_link: "https://github.com/Toiste/Site-Loja-de-Acessorios",
@@ -215,16 +284,32 @@ const projects = [
       "",
     tags: [
       {
-        name: "next",
+        name: "Next",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
+        name: "PostgreSQL",
+        color: "blue-text-gradient",
+      },
+      {
         name: "Tailwind",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Figma",
+        color: "blue-text-gradient",
       },
     ],
     image: youcars,

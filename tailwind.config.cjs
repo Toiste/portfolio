@@ -4,6 +4,18 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-to-right-custom': 'linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255))',
+      },
+      animation: {
+        slides: 'slides 30s linear infinite',
+      },
+      keyframes: {
+        slides: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-40%)' }, // Exemplo para animação de slide horizontal
+        },
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
