@@ -264,11 +264,11 @@ const projects = [
     tags: [
       {
         name: "HTML",
-        color: "blue-text-gradient",
+        color: "orange-text-gradient",
       },
       {
         name: "CSS",
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: "JavaScript",
@@ -276,11 +276,12 @@ const projects = [
       },
       {
         name: "Figma",
-        color: "blue-text-gradient",
+        color: "pink-text-gradient",
       },
     ],
     image: byakuLoja,
     source_code_link: "https://github.com/Toiste/Site-Loja-de-Acessorios",
+    page_link: "https://byaku.netlify.app/"
   },
   {
     name: "You Cars",
@@ -289,7 +290,7 @@ const projects = [
     tags: [
       {
         name: "Next",
-        color: "blue-text-gradient",
+        color: "green-text-gradient",
       },
       {
         name: "React",
@@ -313,11 +314,11 @@ const projects = [
       },
       {
         name: "Figma",
-        color: "blue-text-gradient",
+        color: "pink-text-gradient",
       },
     ],
     image: youcars,
-    source_code_link: "https://github.com/filipesuhett/youcars-comparator",
+    source_code_link: "https://github.com/filipesuhett/youcars-comparator"
   },
   {
     name: "localIF",
@@ -335,6 +336,14 @@ const projects = [
       {
         name: "Java",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Android",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Kotlin",
+        color: "orange-text-gradient",
       },
     ],
     image: localIF,
