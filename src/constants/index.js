@@ -200,6 +200,7 @@ const experiences = [
     iconBg: "White",
     date: "February 2023",
     points: [
+      "thinking and developing solutions and ideas for practices and learning in web development",
       "Developing and maintaining web applications using React.js and other related technologies.",
     ],
   },
@@ -210,7 +211,8 @@ const experiences = [
     iconBg: "White",
     date: "November 2023",
     points: [
-      "Developing and maintaining web applications using HTML, CSS, JS and other related technologies."
+      "Responsible for teaching short courses offered by the project at the institution",
+      "Responsible for putting together the lesson planning for the Minicourse taught"
     ],
   },
   {
@@ -220,7 +222,9 @@ const experiences = [
     iconBg: "White",
     date: "April 2024",
     points: [
-      "Developing and maintaining web applications using HTML, CSS, JS and other related technologies.",
+      "responding to requests for the creation of systems and websites from the campus’ internal and external community",
+      "Responsible for organizing and ensuring the execution of active project processes",
+      "I developed professionalism and a love for doing good for the community in the region"
     ],
   },
 ];
@@ -256,7 +260,7 @@ const projects = [
   {
     name: "accessories store",
     description:
-      "a store with a lot of masculine acessories, you can explore a lot of options.",
+      "Byaku is an online store for men's accessories, designed to offer a stylish and practical shopping experience. The website features a selection of modern bracelets, necklaces and rings, with an intuitive and responsive interface. The platform was developed to ensure fluid navigation and efficient product management, providing users with a pleasant and hassle-free shopping experience.",
     tags: [
       {
         name: "HTML",
@@ -281,7 +285,7 @@ const projects = [
   {
     name: "You Cars",
     description:
-      "",
+      "You Cars is an innovative platform dedicated to car enthusiasts. It offers a complete experience with features such as login, favorites, reviews and user profiles. With a comprehensive database, visitors can explore a large collection of cars and compare models based on their preferences.",
     tags: [
       {
         name: "Next",
@@ -313,7 +317,7 @@ const projects = [
       },
     ],
     image: youcars,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/filipesuhett/youcars-comparator",
   },
   {
     name: "localIF",
