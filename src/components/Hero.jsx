@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import backgroundfoto from "../assets/background/ifes_serra.jpg";
 
 const Hero = () => {
   return (
@@ -9,23 +10,27 @@ const Hero = () => {
       <div
         className={`absolute inset-0 ${styles.distanceHeroHead}  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className='flex flex-col justify-center items-center mt-5'>
+        {/* <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
+        </div> */}
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Marllon</span>
+        <div className="flex justify-center flex-col w-full">
+          <h1 className={`${styles.heroHeadText} text-[#3E1F0F] text-center`}>
+            Hi, I'm <span className='text-[#915eff]'>Marllon</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop user interfaces <br className='sm:block hidden' />
+          <p className={`${styles.heroSubText} mt-2 text-[#3E1F0F] text-center`}>
+            I develop user interfaces
             and web applications
           </p>
         </div>
       </div>
-      <div className="absolute flex justify-center w-full bottom-28">
-          <ComputersCanvas />
+      <div className="absolute flex justify-center items-center w-full  lg:bottom-40 md:bottom-32 sm:bottom-40 bottom-40">
+          {/* <ComputersCanvas /> */}
+          <div className="lg:w-[35%] md:w-[60%] sm:w-[70%] w-[90%] ">
+            <img className="rounded-xl green-pink-gradient p-[1.5px]" src={backgroundfoto} alt="foto da instituição federal do Espirito santo Campus Serra"/>
+          </div>
+          
       </div>
       
 

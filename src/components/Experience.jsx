@@ -11,12 +11,13 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import minhaImagem from "../assets/fotos/perfil2.png";
 
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "#392e1e",
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
@@ -35,7 +36,7 @@ const ExperienceCard = ({ experience }) => {
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-[#ca984d] text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -60,7 +61,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+        <img className="mx-auto rounded-lg border-[#cacaca] border-4" src={minhaImagem} alt="foto de perfil do dono do portfolio" width={300}/>
+        <p className={`${styles.sectionSubText} text-center mt-4`}>
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
