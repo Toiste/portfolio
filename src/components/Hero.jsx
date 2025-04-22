@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import backgroundfoto from "../assets/background/ifes_serra.jpg";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
+  const {language, toggleLanguage} = useLanguage()
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -17,11 +19,10 @@ const Hero = () => {
 
         <div className="flex justify-center flex-col w-full">
           <h1 className={`${styles.heroHeadText} text-[#3E1F0F] text-center`}>
-            Hi, I'm <span className='text-[#915eff]'>Marllon</span>
+          {language === 'pt' ? (<>Olá, Eu sou <span className='text-[#915eff]'>Marllon</span></>) : (<>Hi, I'm <span className='text-[#915eff]'>Marllon</span></>)}
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-[#3E1F0F] text-center`}>
-            I develop user interfaces
-            and web applications
+            {(language === "pt" ? 'Eu desenvolvo Interfaces de Usuário e Aplicações Web' : 'I develop user interfaces and web applications')}
           </p>
         </div>
       </div>

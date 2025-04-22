@@ -6,9 +6,10 @@ import {
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
+import { useLanguage } from "../context/LanguageContext";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+import { experiences, experiencia } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import minhaImagem from "../assets/fotos/perfil2.png";
@@ -58,21 +59,22 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const {language, toggleLanguage} = useLanguage()
   return (
     <>
       <motion.div variants={textVariant()}>
         <img className="mx-auto rounded-lg border-[#cacaca] border-4" src={minhaImagem} alt="foto de perfil do dono do portfolio" width={300}/>
         <p className={`${styles.sectionSubText} text-center mt-4`}>
-          What I have done so far
+        {language === "pt" ? "Minhas realizações até aqui" : "What I have done so far"}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          My Journey.
+          {language === "pt" ? "Minha Jornada" : "My Journey."}
         </h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {(language === "pt" ? experiencia : experiences).map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

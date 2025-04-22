@@ -3,9 +3,10 @@ import { Tilt } from 'react-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services, servicos } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -36,27 +37,25 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const {language, toggleLanguage} = useLanguage();
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>{language === "pt" ? "Introdução" : "Introduction"}</p>
+        <h2 className={styles.sectionHeadText}>{language === "pt" ? "visão geral" : "Overview"}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-[#cacaca] text-[20px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in
-        JavaScript, and expertise in technologies like Next ,React, Node.js and
-        wordpress. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        {language === "pt" ? "Sou um desenvolvedor de software qualificado, com experiência em JavaScript e especialização em tecnologias como Next, React, Node.js e WordPress. Aprendo rápido e colaboro de perto com os clientes para criar soluções eficientes, escaláveis e fáceis de usar, que resolvem problemas do mundo real. Vamos trabalhar juntos para dar vida às suas ideias!" : "I'm a skilled software developer with experience in JavaScript, and expertise in technologies like Next ,React, Node.js and wordpress. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!"}
+        
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {(language === "pt" ? servicos : services).map((service, index) => (
+          <ServiceCard key={index} index={index} {...service} />
         ))}
       </div>
     </>

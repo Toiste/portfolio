@@ -38,6 +38,21 @@ export const navLinks = [
   },
 ];
 
+export const navLinksBR = [
+  {
+    id: "about",
+    title: "Sobre",
+  },
+  {
+    id: "work",
+    title: "Experiência",
+  },
+  {
+    id: "contact",
+    title: "Contato",
+  },
+];
+
 const services = [
   {
     title: "Web Developer",
@@ -53,6 +68,25 @@ const services = [
   },
   {
     title: "sometimes designer",
+    icon: creator,
+  },
+];
+
+const servicos = [
+  {
+    title: "Desenvolvedor Web",
+    icon: web,
+  },
+  {
+    title: "Desenvolvedor React",
+    icon: mobile,
+  },
+  {
+    title: "Desenvolvedor Backend",
+    icon: backend,
+  },
+  {
+    title: "As vezes Design",
     icon: creator,
   },
 ];
@@ -229,6 +263,55 @@ const experiences = [
   },
 ];
 
+const experiencia = [
+  {
+    title: "Início no IFES",
+    company_name: "Instituto Federal do Espírito Santo",
+    icon: ifesLogo,
+    iconBg: "White",
+    date: "Março de 2022",
+    points: [
+      "Comecei a aprender sobre Lógica, Lógica de Programação, Cálculo...",
+      "Introdução ao mundo da Programação.",
+      "Após um tempo, iniciei meus primeiros projetos no Github.",
+    ],
+  },
+  {
+    title: "Projetos de Aprendizado",
+    company_name: "Projetos do IFES e Projetos Pessoais",
+    icon: ifesLogo,
+    iconBg: "White",
+    date: "Fevereiro de 2023",
+    points: [
+      "Pensando e desenvolvendo soluções e ideias práticas para aprendizado em desenvolvimento web.",
+      "Desenvolvendo e mantendo aplicações web utilizando React.js e outras tecnologias relacionadas.",
+    ],
+  },
+  {
+    title: "Monitor de aula, bolsista",
+    company_name: "Lampex",
+    icon: lampexLogo,
+    iconBg: "White",
+    date: "Novembro de 2023",
+    points: [
+      "Responsável por ministrar cursos de curta duração oferecidos pelo projeto na instituição.",
+      "Responsável por elaborar o planejamento de aulas para o minicurso ministrado.",
+    ],
+  },
+  {
+    title: "Gerente de projeto Lampex",
+    company_name: "Lampex",
+    icon: lampexLogo,
+    iconBg: "White",
+    date: "Abril de 2024",
+    points: [
+      "Atendimento às solicitações de criação de sistemas e sites da comunidade interna e externa do campus.",
+      "Responsável por organizar e garantir a execução dos processos ativos do projeto.",
+      "Desenvolvi profissionalismo e um amor por fazer o bem para a comunidade da região.",
+    ],
+  },
+];
+
 const testimonials = [
   {
     testimonial:
@@ -351,4 +434,100 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const projetos = [
+  {
+    name: "Loja de Acessórios",
+    description:
+      "Byaku é uma loja online de acessórios masculinos, projetada para oferecer uma experiência de compra estilosa e prática. O site apresenta uma seleção de pulseiras, colares e anéis modernos, com uma interface intuitiva e responsiva. A plataforma foi desenvolvida para garantir uma navegação fluida e uma gestão eficiente de produtos, proporcionando aos usuários uma experiência de compra agradável e sem complicações.",
+    tags: [
+      {
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Figma",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: byakuLoja,
+    source_code_link: "https://github.com/Toiste/Site-Loja-de-Acessorios",
+    page_link: "https://byaku.netlify.app/",
+  },
+  {
+    name: "You Cars",
+    description:
+      "You Cars é uma plataforma inovadora dedicada aos entusiastas de carros. Oferece uma experiência completa com recursos como login, favoritos, avaliações e perfis de usuários. Com um banco de dados abrangente, os visitantes podem explorar uma grande coleção de carros e comparar modelos com base em suas preferências.",
+    tags: [
+      {
+        name: "Next",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Figma",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: youcars,
+    source_code_link: "https://github.com/filipesuhett/youcars-comparator",
+  },
+  {
+    name: "LocalIF",
+    description:
+      "LocalIF é um aplicativo de reconhecimento de imagem desenvolvido especificamente para o IFES Campus Serra. Com um banco de dados abrangente, o programa armazena informações sobre os diversos locais do campus.",
+    tags: [
+      {
+        name: "C",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Java",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Android",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Kotlin",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: localIF,
+    source_code_link: "https://github.com/jhonatademuner/localif?tab=readme-ov-file",
+  },
+];
+
+
+export { services, technologies, experiences, testimonials, projects, projetos, experiencia, servicos };

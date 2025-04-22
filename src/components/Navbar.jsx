@@ -2,13 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+import { navLinks,navLinksBR } from "../constants";
 import { logo, menu, close } from "../assets";
+
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const {language, toggleLanguage} = useLanguage()
+
+  useEffect(() => {
+    console.log("Idioma atual:", language);
+  }, [language]); // ← roda sempre que o language mudar
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,12 +52,21 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-12 h-12 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            <span className='sm:block hidden'>| Full Stack Developer</span>
+            <span className='sm:block hidden'>{language === "pt" ? '| Desenvolvedor Full Stack' : '| Full Stack Developer'}</span>
           </p>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
+          <li>
+              <span className="text-xl">EN</span>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked={language === "pt"} onChange={toggleLanguage} className="sr-only peer"></input>
+                <div className="w-11 h-6 bg-blue-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-green-300 transition-all"></div>
+                <div className="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-transform peer-checked:translate-x-full"></div>
+              </label>
+              <span className="text-xl">PT</span>
+          </li>
+          {(language === "pt" ? navLinksBR : navLinks).map((nav) => (
             <li
               key={nav.id}
               className={`${
@@ -76,7 +93,16 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
+            <li>
+              <span className="text-xl">EN</span>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked={language === "pt"} onChange={toggleLanguage} className="sr-only peer"></input>
+                <div className="w-11 h-6 bg-blue-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-green-300 transition-all"></div>
+                <div className="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-transform peer-checked:translate-x-full"></div>
+              </label>
+              <span className="text-xl">PT</span>
+          </li>
+              {(language === "pt" ? navLinksBR : navLinks).map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${

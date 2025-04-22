@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github, internet } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects, projetos } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const ProjectCard = ({
   index,
@@ -83,11 +84,12 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const {language, toggleLanguage} = useLanguage()
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My Own</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>{language === "pt" ? "Meus Própios" : "My Own"}</p>
+        <h2 className={`${styles.sectionHeadText}`}>{language === "pt" ? "Projetos" : "Projects."}</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -95,16 +97,13 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-[#cacaca] text-[20px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          {language === "pt" ? "Os projetos a seguir demonstram minhas habilidades e experiência por meio de exemplos reais do meu trabalho. Cada projeto é brevemente descrito, com links para os repositórios de código e demonstrações ao vivo. Eles refletem minha capacidade de resolver problemas complexos, trabalhar com diferentes tecnologias e gerenciar projetos de forma eficaz." : "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively."}
+          
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
+        {(language === "pt" ? projetos : projects).map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
